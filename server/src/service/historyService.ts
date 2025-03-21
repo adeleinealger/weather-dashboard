@@ -51,7 +51,7 @@ class HistoryService {
       return [...cities, newCity];
     })
     .then((updatedCities) => this.write(updatedCities))
-    .then(() => newCity);
+    .then(() => [{ newCity }]);
   }
   // Define a removeCity method that removes a city from the searchHistory.json file
   async removeCity(id: string) {
