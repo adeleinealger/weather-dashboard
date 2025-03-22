@@ -15,10 +15,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
-app.get('*.ts', (_req, res, next) => {
-    res.type('application/javascript');
-    next();
-  });
-
 // Start the server on the port
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
